@@ -14,7 +14,7 @@ get_header(); ?>
 
 		<?php
 		if ( have_posts() ) : ?>
-
+<div class="entry-inside">
 			<header class="page-header">
 				<h1 class="page-title"><?php
 					/* translators: %s: search query. */
@@ -42,10 +42,9 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
-
+</div>
 		</main><!-- #main -->
 	</section><!-- #primary -->
-
 <?php
 get_sidebar();
 get_footer();

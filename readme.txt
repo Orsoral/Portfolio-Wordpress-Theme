@@ -1,19 +1,19 @@
 === elia ===
 
-Contributors: automattic
+Contributors: automattic, cornelia Laros
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 Requires at least: 4.0
 Tested up to: 4.8
 Stable tag: 1.0.0
-License: GNU General Public License v2 or later
+License: GNU General Public License v2 and later
 License URI: LICENSE
 
-A starter theme called elia.
+A custom theme called Elia based on Underscores.me for the personal and professional branding of cornelia’s wordpress sites.
 
 == Description ==
 
-Description
+A theme implementing the personal branding of cornelia into wordpress.
 
 == Installation ==
 
@@ -32,7 +32,11 @@ elia includes support for Infinite Scroll in Jetpack.
 = 1.0 - May 12 2015 =
 * Initial release
 
+= 1.0 - Dec 27 2017 =
+* Initial release of the Cornelia branding
+
 == Credits ==
 
+* Theme customisation by Cornelia Laros
 * Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)

@@ -13,12 +13,14 @@ get_header(); ?>
 		<main id="main" class="site-main">
 
 			<section class="error-404 not-found">
+				<div class="entry-inside">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'elia' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( '404 - Apparently, this page is not
+compatible with any browser.', 'elia' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'elia' ); ?></p>
+					<p><?php esc_html_e( 'It\'s probably not your fault. Mistakes help us if we learn from them. Here\'s what you can try next :', 'elia' ); ?></p>
 
 					<?php
 						get_search_form();
@@ -51,6 +53,7 @@ get_header(); ?>
 					?>
 
 				</div><!-- .page-content -->
+			</div><!-- .entry-inside -->
 			</section><!-- .error-404 -->
 
 		</main><!-- #main -->

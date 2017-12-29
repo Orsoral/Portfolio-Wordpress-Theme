@@ -15,6 +15,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+				<div class="entry-inside">
 		<?php
 			the_content();
 
@@ -46,5 +47,6 @@
 				);
 			?>
 		</footer><!-- .entry-footer -->
+		</div><!-- .entry-inside -->
 	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

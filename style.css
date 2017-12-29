@@ -54,7 +54,7 @@ html {
 }
 
 body {
-	margin: 0;
+	margin: auto;
 }
 
 article,
@@ -75,14 +75,8 @@ summary {
 header {
 }
 
-main {
-	margin: auto;
-}
-
 footer{
 	clear: both;
-	background-image: linear-gradient(to top right, #1CFFFF, #00BFA5);
-	padding: 2em 1em 2em 1em;
 }
 
 audio,
@@ -292,10 +286,12 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+	max-width: 65em;
 }
 
 p {
 	margin-bottom: 1.5em;
+	max-width: 65em;
 }
 
 dfn, cite, em, i {
@@ -340,6 +336,10 @@ mark, ins {
 
 big {
 	font-size: 125%;
+}
+
+li {
+	list-style-image: url("images/icon-list.png");
 }
 
 /*--------------------------------------------------------------
@@ -545,16 +545,21 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+
+#site-navigation {
+	display: block;
+	margin-left: -3em;
+}
+
 .main-navigation {
 	clear: both;
-	display: block;
-	float: right;
+	/* display: block; */
+	/* float: right; */
 }
 
 .main-navigation ul {
-	display: none;
+	/* display: none; */
 	list-style: none;
-	margin: 0;
 	padding-left: 0;
 }
 
@@ -588,6 +593,7 @@ a:hover, a:active {
 .main-navigation li {
 	float: left;
 	position: relative;
+	list-style-image: none;
 }
 
 .main-navigation a {
@@ -597,28 +603,30 @@ a:hover, a:active {
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
+	display: none;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 50em) {
 	.menu-toggle {
 		display: none;
+		float: right;
 	}
 
 	#site-navigation {
-		margin: -4em 0 0 0;
+		margin: auto;
+		margin: -6em 0 0 0;
+		float: right;
 	}
 
 	.main-navigation ul {
 		display: block;
 		}
 	}
-}
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
-	margin: 0 0 1.5em;
+	margin: auto;
 	overflow: hidden;
 }
 
@@ -703,6 +711,23 @@ a:hover, a:active {
 	margin-right: auto;
 }
 
+/* Center all images on mobile */
+
+@media screen and (max-width: 50em) {
+
+	.alignleft {
+		display: block;
+		float: none;
+		margin: auto;
+	}
+
+	.alignright {
+		display: block;
+		float: none;
+		margin: auto;
+	}
+}
+
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
@@ -712,8 +737,8 @@ a:hover, a:active {
 .entry-content:after,
 .comment-content:before,
 .comment-content:after,
-/*.site-header:before,
-.site-header:after,*/
+.site-header:before,
+.site-header:after,
 .site-content:before,
 .site-content:after,
 .site-footer:before,
@@ -736,12 +761,13 @@ a:hover, a:active {
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 1.5em;
+	margin: auto;
+	max-width: 60em;
 	/* Make sure select elements fit in widgets. */
 }
 
 .widget select {
-	max-width: 100%;
+	max-width: 60em%;
 }
 
 /*--------------------------------------------------------------
@@ -762,16 +788,65 @@ a:hover, a:active {
 	display: none;
 }
 
+.content-area,
+.site-main.
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: auto;
 }
+
+.entry-meta,
+.entry-header,
+.entry-inside,
+.entry-footer {
+	max-width: 60em;
+	margin: auto;
+	}
 
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+/*--------------------------------------------------------------
+## Backgrounds
+--------------------------------------------------------------*/
+.site-footer {
+	background-image: linear-gradient(to top right, #1CFFFF, #00BFA5);
+	min-width: 100%;
+	padding: 2em 4em 2em 4em;
+	margin: 0 -4em -1em -4em;
+}
+
+.entry-content {
+	background-image: url(images/bg-bottom-up.png);
+	background-position: bottom left;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin: 1em -1em 1em -1em;
+	padding: 1em;
+}
+
+.site {
+		background-image: url(images/bg-top.png);
+		background-position: bottom top;
+		background-repeat: no-repeat;
+		background-size: contain;
+		margin: -1em -1em 0 -1em;
+		padding: 1em;
+	}
+
+	.widget-area {
+		background-image: url(images/bg-bottom.png);
+		background-position: bottom left;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-origin: padding-box;
+		margin: 4em -1em 0 -1em;
+		padding: 0em 1em 2em 1em;
+		min-height: 40em;
+	}
 
 /*--------------------------------------------------------------
 ## Comments
@@ -806,6 +881,7 @@ a:hover, a:active {
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
 	border: none;
+	margin: auto;
 	margin-bottom: 0;
 	margin-top: 0;
 	padding: 0;
@@ -899,7 +975,7 @@ object {
 /* HEADER */
 
 html{
-	padding: 0.5em;
+	padding-top: 0.5em;
 	color: blue;
 }
 
@@ -929,5 +1005,3 @@ html{
 .site-description a {
 	color: #3E2623;
 }
-
-/* Backgrounds */
